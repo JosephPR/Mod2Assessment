@@ -1,0 +1,16 @@
+
+
+<form action="/guitars/<%= @guitar.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input id="name" type="text" name="guitar[name]" value="<%= @guitar.name %>" />
+    </li>
+    <li>
+      <label for="body">Body</label>
+      <input id="body" type="text" name="guitar[body]" value="<%= @guitar.body %>">
+    </li>
+  </ul>
+  <input type="submit" value="EDIT"/>
+</form>

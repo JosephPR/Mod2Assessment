@@ -1,0 +1,15 @@
+<h1><%= @guitar.name %></h1>
+ <h3><%= @guitar.body %></h3>
+
+
+<form method="post" action="/guitars/<%= @guitar.id %>">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="delete"/>
+</form>
+<form action="/guitars/<%= @guitar.id %>/edit">
+  <input type="submit" value="Edit Guitar">
+</form>
+
+<form action="/guitars">
+  <input type="submit"value="Home">
+</form>
