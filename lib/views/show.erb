@@ -4,12 +4,13 @@
 
 <form method="post" action="/guitars/<%= @guitar.id %>">
   <input type="hidden" name="_method" value="delete" />
-  <input type="submit" value="delete"/>
+  <input class="btn btn-danger" type="submit" value="delete"/>
 </form>
+<br>
 <form action="/guitars/<%= @guitar.id %>/edit">
-  <input type="submit" value="Edit Guitar">
+  <input class="btn btn-warning" type="submit" value="Edit Guitar">
 </form>
-
+<br>
 <form action="/guitars">
-  <input type="submit"value="Home">
+  <input class="btn btn-success" type="submit"value="Home">
 </form>

@@ -1,21 +1,29 @@
-
-
 <html>
-  <head></head>
+  <head>
+<title>GuitarFinder</title>
+  </head>
   <body>
-    <h1>Hello, Welcome to Guitar Finder!</h1>
-    <ul>
-      <% @guitars.each do |guitar| %>
-        <li>
-        <a href="/guitars/<%= guitar.id %>">
-           <%= guitar.name %> - <%= guitar.body %>
-        </a>
-        </li>
-      <% end %>
-    </ul>
-    <form  action="guitars/new">
-      <input type="submit" value="Create New Guitar" />
-    </form>
+
+      <div class="container">
+
+
+        <h1>Hello, Welcome to Guitar Finder!</h1>
+        <ul>
+          <% @guitars.each do |guitar| %>
+            <li>
+            <a href="/guitars/<%= guitar.id %>">
+               <%= guitar.name %> - <%= guitar.body %>
+            </a>
+            </li>
+          <% end %>
+        </ul>
+        <form  action="guitars/new">
+          <input class="btn btn-warning" type="submit" value="Create New Guitar" />
+        </form>
+
+      </div>
+
+
 
   </body>
 </html>
